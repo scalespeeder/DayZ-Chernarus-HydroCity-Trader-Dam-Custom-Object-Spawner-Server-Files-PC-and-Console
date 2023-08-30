@@ -1,0 +1,1950 @@
+// HydroCity Trader location for the Dr Jones Trader Mod
+
+// To Install:
+// Make sure you have the "Trader" mod by Dr Jones
+// Put this file "hydrocity.txt" in the "Trader" folder on your server.
+// This will be in your Profile or SC folder depending on you provider.
+// Open your existing "TraderObjects.txt" file.
+// At the bottom, on a new line just above "<FileEnd>", add "<OpenFile> hydrocity.txt".
+// Or if you are familiar with editing the Trader config files you can paste this
+// file's contents into your existing TraderObjects minus the last "<FileEnd>" line.
+
+// Description:
+// Completely redesigns the Solnichniy industrial area and adds a massive
+// hydropower dam structure with full reservoirs and a huge underground
+// bunker complex. Trader people are on the lower floor.
+// The car seller is at the front / coast entrance on the road.
+// Out to sea there is a huge wind turbine farm and an extended dock with
+// a Rify ship.
+
+// There is a super secret underground entrance which will require
+// the "Punch Card" item so can have a unique treasure hunt on your server
+// by hiding a card somewhere on the map for players to find, and the winner gets
+// whatever you hide behind the door.
+
+// This was made steadily over about six months for my server "Essex Reapers"
+// It will continue evolve as new ideas come along.
+
+// Extra Features:
+// You will need the "Banking" mod for the ATMs to appear
+// If you have the "Airdrop Upgraded" mod you will get red smoke on the top of the tower.
+// If you have the "OP_BaseItems" mod there will be spotlights at night at the entrances.
+
+// Things that will be changed / improved soon:
+// A few gaps where you can see into areas you shouldn't.
+// Fire Barrels are slashed out due to issue with 1.21 update.
+
+// Things you can change:
+// The water levels can be adjusted, just change the height of any 
+// "StaticObj_water_pond_50x50m" items below that share the same height
+// Or delete them for empty reservoirs.
+// The seperate pools of water are grouped and labeled below
+
+// If you remove the trader people and safe zones this can be used as a
+// massive base for players or admins. Add a few locked BBP doors and
+// it's a fortress. 
+
+// Marker Cordinates for "VanillaPlusPlusMap" 12904.9, 170, 6260 (Tip of Radio Tower)
+
+// Trader Markers
+
+<TraderMarker> 			0
+<TraderMarkerPosition>	12917.6,    24.71,    6249
+<TraderMarkerSafezone>	222
+
+<TraderMarker> 			1
+<TraderMarkerPosition>	12918.3,    24.77,    6244
+<TraderMarkerSafezone>	0
+
+<TraderMarker> 			2
+<TraderMarkerPosition>	12915.1,    24.77,    6242
+<TraderMarkerSafezone>	0
+
+<TraderMarker> 			3
+<TraderMarkerPosition>	12911.6,    24.77,    6242
+<TraderMarkerSafezone>	0
+
+<TraderMarker> 			4
+<TraderMarkerPosition>	12908.6,    24.77,    6242
+<TraderMarkerSafezone>	0
+
+<TraderMarker> 			5
+<TraderMarkerPosition>	13219.8,	8.63,	6228
+<TraderMarkerSafezone>	18
+<VehicleSpawn>			13221.1,	11,	6234.3
+<VehicleSpawnOri>		90,		0,			0
+
+// Trader People
+
+<Object> 			SurvivorM_Niki
+<ObjectPosition>	12917.6,    24.71,    6249
+<ObjectOrientation>	-90,	0,			0
+<ObjectAttachment>	WaterBottle
+<ObjectAttachment>	SurgicalGloves_Green
+<ObjectAttachment>	MedicalScrubsHat_White
+<ObjectAttachment>	MedicalScrubsShirt_White
+<ObjectAttachment>	MedicalScrubsPants_Blue
+<ObjectAttachment>	NBCBootsGray
+
+<Object> 			SurvivorF_Maria
+<ObjectPosition>	12918.3,    24.77,    6244
+<ObjectOrientation>	0,	0,			0
+<ObjectAttachment>	Screwdriver
+<ObjectAttachment>	Shovel
+<ObjectAttachment>	WorkingGloves_Yellow
+<ObjectAttachment>	ConstructionHelmet_Yellow
+<ObjectAttachment>	Shirt_RedCheck
+<ObjectAttachment>	CanvasPants_Beige
+<ObjectAttachment>	WorkingBoots_Yellow
+
+<Object> 			SurvivorM_Hassan
+<ObjectPosition>	12915.1,    24.77,    6242
+<ObjectOrientation>	0,	0,			0
+<ObjectAttachment>	FirefighterAxe
+<ObjectAttachment>	AKM
+<ObjectAttachment>	AK_WoodHndgrd
+<ObjectAttachment>	AK_FoldingBttstck
+<ObjectAttachment>	KobraOptic
+<ObjectAttachment>	SVD
+<ObjectAttachment>	PSO1Optic
+<ObjectAttachment>	TacticalGoggles
+<ObjectAttachment>	TacticalGloves_Green
+<ObjectAttachment>	GorkaHelmet
+<ObjectAttachment>	BandanaMask_CamoPattern
+<ObjectAttachment>	UKAssVest_Camo
+<ObjectAttachment>	GorkaEJacket_Summer
+<ObjectAttachment>	GorkaPants_Summer
+<ObjectAttachment>	MilitaryBoots_Black
+<ObjectAttachment>	AliceBag_Camo
+
+<Object> 			SurvivorM_Elias
+<ObjectPosition>	12911.6,    24.77,    6242
+<ObjectOrientation>	0,	0,			0
+<ObjectAttachment>	AmmoBox_9x19_25rnd
+<ObjectAttachment>	NailedBaseballBat
+<ObjectAttachment>	MP5K
+<ObjectAttachment>	MP5_RailHndgrd
+<ObjectAttachment>	Universallight
+<ObjectAttachment>	MP5k_StockBttstck
+<ObjectAttachment>	M68Optic
+<ObjectAttachment>	MP5_Compensator
+<ObjectAttachment>	OMNOGloves_Gray
+<ObjectAttachment>	BallisticHelmet_Green
+<ObjectAttachment>	BandanaMask_CamoPattern
+<ObjectAttachment>	HighCapacityVest_Olive
+<ObjectAttachment>	USMCJacket_Woodland
+<ObjectAttachment>	USMCPants_Woodland
+<ObjectAttachment>	TTSKOBoots
+<ObjectAttachment>	MilitaryBoots_Black
+
+<Object> 			SurvivorM_Taiki
+<ObjectPosition>	12908.6,    24.77,    6242
+<ObjectOrientation>	0,	0,			0
+<ObjectAttachment>	AviatorGlasses
+<ObjectAttachment>	ZmijovkaCap_Blue
+<ObjectAttachment>	JumpsuitJacket_Blue
+<ObjectAttachment>	Jeans_BlueDark
+<ObjectAttachment>	Sneakers_White
+
+<Object> 			SurvivorM_Jose
+<ObjectPosition>	13219.8,	8.63,	6228
+<ObjectOrientation>	0,	0,			0
+<ObjectAttachment>	LugWrench
+<ObjectAttachment>	WorkingGloves_Black
+<ObjectAttachment>	ReflexVest
+<ObjectAttachment>	JumpsuitJacket_Blue
+<ObjectAttachment>	JumpsuitPants_Blue
+<ObjectAttachment>	HikingBootsLow_Blue
+
+// Main Water Left Side (40 High Default)
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13030, 40, 6130
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13030, 40, 6180
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13030, 40, 6230
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12980, 40, 6179
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12980, 40, 6230
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12955, 40, 6179
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12955, 40, 6230
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12903, 40, 6150
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12903, 40, 6200
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12880, 40, 6149
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12880, 40, 6200
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12839, 40, 6100
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12839, 40, 6150
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12839, 40, 6180
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12839, 40, 6214
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12791, 40, 6180
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12788, 40, 6096
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12788, 40, 6148
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12788, 40, 6200
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12788, 40, 6214
+<ObjectOrientation>	0,	0,	0
+
+// Main Water Right Side (Default 49 High)
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12788, 49, 6275
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12788, 49, 6325
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12839, 49, 6275
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12839, 49, 6300
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12830, 49, 6350
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12880, 49, 6320
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12880, 49, 6370
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12903, 49, 6320
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12903, 49, 6370
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12955, 49, 6290
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12955, 49, 6342
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12980, 49, 6290
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	12980, 49, 6342
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13030, 49, 6290
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13030, 49, 6342
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13030, 49, 6370
+<ObjectOrientation>	0,	0,	0
+
+// Front Water Middle Pool Left (34 Default High)
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13080, 34, 6230
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13080, 34, 6200
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13080, 34, 6150
+<ObjectOrientation>	0,	0,	0
+
+// Front Water Middle Pool Right (34 Default High)
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13080, 34, 6290.5
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13080, 34, 6330
+<ObjectOrientation>	0,	0,	0
+
+// Front Water Lower Pool (Default 19.3 High)
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13149, 19.3, 6256.5
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13149, 19.3, 6298
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13149, 19.3, 6350
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13149, 19.3, 6181
+<ObjectOrientation>	0,	0,	0
+
+// Front Tunnel Water Flood (Default 12.12 high to splash but not get wet)
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13114, 12.12, 6208
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13090, 12.12, 6237
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_water_pond_50x50m
+<ObjectPosition>	13040, 12.12, 6237
+<ObjectOrientation>	0,	0,	0
+
+// Front Wall Top
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13064, 44, 6410
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13064, 44, 6390
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13064, 44, 6370
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13064, 44, 6350
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13064, 44, 6330
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13064, 44, 6310
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20_Floodgate
+<ObjectPosition>	13064.1, 44, 6290
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20_Floodgate
+<ObjectPosition>	13064.1, 44, 6270
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20_Floodgate
+<ObjectPosition>	13064.1, 44, 6250
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20_Floodgate
+<ObjectPosition>	13064.1, 44, 6230
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13064, 44, 6210
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13064, 44, 6190
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13064, 44, 6170
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13064, 44, 6150
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13064, 44, 6130
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Mil_ControlTower
+<ObjectPosition>	13059.9, 60.7, 6312.5
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Mil_ControlTower
+<ObjectPosition>	13059.9, 60.7, 6206
+<ObjectOrientation>	-90,	0,	0
+
+// Front Middle Wall
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13114, 29, 6370
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13114, 29, 6350
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13114, 29, 6330
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13114, 29, 6310
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13114, 29, 6290
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20_Floodgate
+<ObjectPosition>	13114.1, 29, 6270
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20_Floodgate
+<ObjectPosition>	13114.1, 29, 6250
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13114, 29, 6230
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13114, 29, 6210
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13114, 29, 6190
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13114, 29, 6170
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13114, 29, 6150
+<ObjectOrientation>	-90,	0,	0
+
+// Front Lower Wall
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13182.5, 13.8, 6190
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13182.5, 13.8, 6350
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13182.5, 13.8, 6330
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13182.5, 13.8, 6310
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13182.5, 13.8, 6290
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20_Floodgate
+<ObjectPosition>	13182.6, 13.8, 6270
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20_Floodgate
+<ObjectPosition>	13182.6, 13.8, 6250
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13182.5, 13.8, 6230
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13182.5, 13.8, 6210
+<ObjectOrientation>	-90,	0,	0
+
+// Front Entrance
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13170, 12.5, 6202
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13150, 12.5, 6202
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13130, 12.5, 6202
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13170, 12.5, 6231
+<ObjectOrientation>	180,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13150, 12.5, 6231
+<ObjectOrientation>	180,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13130, 12.5, 6231
+<ObjectOrientation>	180,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13121, 18.5, 6192.7
+<ObjectOrientation>	-90,	-25,	0
+
+<Object>			StaticObj_Pier_Concrete1_CornerOut
+<ObjectPosition>	13171, -3.5, 6216
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1_CornerOut
+<ObjectPosition>	13160, -7, 6216
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1_CornerOut
+<ObjectPosition>	13149, -10.4, 6216
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13142, -11.8, 6218
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_30
+<ObjectPosition>	13168, 21.6, 6216.51
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_30
+<ObjectPosition>	13157, 18.2, 6216.51
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_30
+<ObjectPosition>	13145.5, 14.7, 6216.51
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_20
+<ObjectPosition>	13135, 12.1, 6216.51
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_20
+<ObjectPosition>	13177.4, 22.4, 6216.5
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_20
+<ObjectPosition>	13176.5, 22.4, 6206
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_20
+<ObjectPosition>	13098, 37.6, 6260
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_20
+<ObjectPosition>	13108, 37.6, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_20
+<ObjectPosition>	13048, 52.8, 6260
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_20
+<ObjectPosition>	13058, 52.8, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1_CornerOut
+<ObjectPosition>	13185, -3.5, 6200
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1_CornerOut
+<ObjectPosition>	13190, -7, 6210
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1_CornerOut
+<ObjectPosition>	13205, -10.4, 6217
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1_CornerOut
+<ObjectPosition>	13184.9, -10.4, 6217
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_30
+<ObjectPosition>	13186.5, 21.6, 6206
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_30_WallL
+<ObjectPosition>	13185.5, 21.6, 6207.2
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_30_WallR	
+<ObjectPosition>	13185.5, 21.6, 6204.8
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_30
+<ObjectPosition>	13192, 18.2, 6214
+<ObjectOrientation>	180,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_30_WallL
+<ObjectPosition>	13190.8, 18.2, 6212.5
+<ObjectOrientation>	180,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_30_WallR	
+<ObjectPosition>	13193.3, 18.2, 6212.5
+<ObjectOrientation>	180,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_30
+<ObjectPosition>	13204, 14.7, 6217
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_30_WallL
+<ObjectPosition>	13202.7, 14.7, 6215.8
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_30_WallR	
+<ObjectPosition>	13202.7, 14.7, 6218.2
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_30
+<ObjectPosition>	13219, 11.3, 6223
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_30_WallL
+<ObjectPosition>	13217.7, 11.3, 6224.2
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_30_WallR	
+<ObjectPosition>	13217.9, 11.3, 6221.9
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_20
+<ObjectPosition>	13225, 8.6, 6226
+<ObjectOrientation>	-130,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13076.5, 28, 6255
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13096.5, 28, 6255
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Mil_Guardhouse1
+<ObjectPosition>	13190.45, 23.1, 6200.1
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Guardhouse
+<ObjectPosition>	13217.4, 9.37, 6227
+<ObjectOrientation>	177,	0,	0
+
+<Object>			StaticObj_Misc_RoadBarrier
+<ObjectPosition>	13214, 8.6, 6232
+<ObjectOrientation>	-2,	0,	0
+
+<Object>			Land_RoadCone
+<ObjectPosition>	13217, 8.2, 6232.5
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_RoadCone
+<ObjectPosition>	13217, 7.85, 6236.1
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_RoadCone
+<ObjectPosition>	13225, 8.15, 6232.5
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_RoadCone
+<ObjectPosition>	13225, 7.9, 6236.5
+<ObjectOrientation>	0,	0,	0
+
+// Front Tunnel
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	13100.23, 12, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	13090.23, 12, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	13080.23, 12, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	13070.23, 12, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	13060.23, 12, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	13050.23, 12, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	13040.7, 12.4, 6260
+<ObjectOrientation>	-90,	5,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	13031.2, 13.5, 6260
+<ObjectOrientation>	-90,	8,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	13022, 14.95, 6260
+<ObjectOrientation>	-90,	10,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	13012.23, 16.68, 6260
+<ObjectOrientation>	-90,	10,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	13002.4, 18.4, 6260
+<ObjectOrientation>	-90,	10,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12992.5, 20.1, 6260
+<ObjectOrientation>	-90,	10,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12982.7, 21.85, 6260
+<ObjectOrientation>	-90,	10,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12972.85, 23.59, 6260
+<ObjectOrientation>	-90,	10,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12962.9, 24.45, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12952.9, 24.45, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12942.9, 24.45, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12933, 24.57, 6260
+<ObjectOrientation>	-90,	1.5,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12924.5, 24.8, 6260
+<ObjectOrientation>	-90,	1.5,	0
+
+// Front Tunnel Start
+
+<Object>			Land_Underground_Tunnel_Single_Left
+<ObjectPosition>	13112, 12, 6253.25
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	13112, 12, 6248.28
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	13112, 12, 6238.28
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	13112, 12, 6228.28
+<ObjectOrientation>	0,	0,	0
+<Object>			Land_Underground_Tunnel_Single_Right
+<ObjectPosition>	13118.73, 12, 6216.51
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	13123.73, 12, 6216.51
+<ObjectOrientation>	-90,	0,	0
+
+// Front Extras
+
+<Object>			StaticObj_Mine_Tunnel
+<ObjectPosition>	13185, 9.8, 6232
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Power_TransformerStation_Big
+<ObjectPosition>	13130, 24.2, 6207.3
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Power_TransformerStation_Big
+<ObjectPosition>	13130, 24.2, 6226.1
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Wreck_Mining_Excavator
+<ObjectPosition>	13145.2, 30.2, 6335.73
+<ObjectOrientation>	180,	-16,	-5
+
+// Back Wall
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12752.5, 44, 6330
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12752.5, 44, 6310
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12752.5, 44, 6290
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12752.5, 44, 6270
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12752.5, 44, 6250
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20_Floodgate
+<ObjectPosition>	12752.4, 44, 6230
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20_Floodgate
+<ObjectPosition>	12752.4, 44, 6210
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20_Floodgate
+<ObjectPosition>	12752.4, 44, 6190
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20_Floodgate
+<ObjectPosition>	12752.4, 44, 6170
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12752.5, 44, 6150
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12752.5, 44, 6130
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12752.5, 44, 6110
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12752.5, 44, 6090
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12752.5, 44, 6070
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12752.5, 44, 6050
+<ObjectOrientation>	90,	0,	0
+
+// Back Wall Flipped
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12732.9, 24.4, 6270
+<ObjectOrientation>	-90,	-90,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12732.9, 24.4, 6250
+<ObjectOrientation>	-90,	-90,	0
+
+<Object>			StaticObj_Dam_Concrete_20_Floodgate
+<ObjectPosition>	12732.9, 24.4, 6230
+<ObjectOrientation>	-90,	-90,	0
+
+<Object>			StaticObj_Dam_Concrete_20_Floodgate
+<ObjectPosition>	12732.9, 24.4, 6210
+<ObjectOrientation>	-90,	-90,	0
+
+<Object>			StaticObj_Dam_Concrete_20_Floodgate
+<ObjectPosition>	12732.9, 24.4, 6190
+<ObjectOrientation>	-90,	-90,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12733.25, 24.4, 6157
+<ObjectOrientation>	-90,	-90,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12733.25, 24.4, 6137
+<ObjectOrientation>	-90,	-90,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12733.25, 24.4, 6117
+<ObjectOrientation>	-90,	-90,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12733.25, 24.4, 6097
+<ObjectOrientation>	-90,	-90,	0
+
+<Object>			StaticObj_Pier_Concrete2
+<ObjectPosition>	12727,    1.28,    6231.8
+<ObjectOrientation>	90,    	8,	0
+
+<Object>			StaticObj_Pier_Concrete2
+<ObjectPosition>	12727,    1.28,    6191.8
+<ObjectOrientation>	90,    	8,	0
+
+<Object>			StaticObj_Pier_Concrete2
+<ObjectPosition>	12727,    1.28,    6148.2
+<ObjectOrientation>	90,    	8,	0
+
+<Object>			StaticObj_Pier_Concrete2
+<ObjectPosition>	12727,    1.28,    6108.2
+<ObjectOrientation>	90,    	8,	0
+
+<Object>			StaticObj_Pier_Concrete3_2
+<ObjectPosition>	12715.5,    0.5,    6170
+<ObjectOrientation>	0,    	0,	-8
+
+<Object>			StaticObj_Pier_Concrete3_1
+<ObjectPosition>	12676,    -5.05,    6170
+<ObjectOrientation>	180,    	0,	8
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12734.1, 22, 6183
+<ObjectOrientation>	90,	-80,	180
+
+// Back Wall Items
+
+<Object>			StaticObj_Power_TransformerStation_Big
+<ObjectPosition>	12723, 27.7, 6150
+<ObjectOrientation>	90,	8,	0
+
+<Object>			StaticObj_Power_TransformerStation_Big
+<ObjectPosition>	12723, 27.7, 6190
+<ObjectOrientation>	90,	8,	0
+
+<Object>			StaticObj_Power_TransformerStation_Big
+<ObjectPosition>	12723, 27.7, 6210
+<ObjectOrientation>	90,	8,	0
+
+<Object>			Land_Mil_ControlTower
+<ObjectPosition>	12756.7, 60.7, 6148
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Mil_ControlTower
+<ObjectPosition>	12756.7, 60.7, 6254
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_20
+<ObjectPosition>	12758, 52.8, 6245
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_20
+<ObjectPosition>	12768, 52.8, 6245
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Wall_IndCnc4_8
+<ObjectPosition>	12741, 33, 6170
+<ObjectOrientation>	90,	-58,	0
+
+<Object>			StaticObj_BusStop_Village
+<ObjectPosition>	12621, 25.3, 6206
+<ObjectOrientation>	24,	0,	0
+
+<Object>			Land_Mil_Guardhouse1
+<ObjectPosition>	12674, 22.8, 6183
+<ObjectOrientation>	-70,	0,	0
+
+<Object>			StaticObj_Misc_RoadBarrier_2
+<ObjectPosition>	12629, 27.4, 6196
+<ObjectOrientation>	-65,	0,	0
+
+<Object>			StaticObj_Misc_RoadBarrier_2
+<ObjectPosition>	12676, 24, 6172
+<ObjectOrientation>	110,	0,	0
+
+// Front Bridge
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13044, 43, 6255
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	13024, 43, 6255
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20_Floodgate
+<ObjectPosition>	13004, 43, 6254.9
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12984, 43, 6255
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12964, 43, 6255
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12944, 43, 6255
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12934, 44.1, 6255.01
+<ObjectOrientation>	0,	0,	6
+
+// Centre Stucture
+
+<Object>			StaticObj_Pier_Concrete1_CornerOut
+<ObjectPosition>	12934, 30.2, 6290
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1_CornerOut
+<ObjectPosition>	12934, 30.2, 6230
+<ObjectOrientation>	180,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1_CornerOut
+<ObjectPosition>	12874, 30.2, 6230
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1_CornerOut
+<ObjectPosition>	12874, 30.2, 6290
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1_CornerOut
+<ObjectPosition>	12934, 30.15, 6275
+<ObjectOrientation>	180,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1_CornerOut
+<ObjectPosition>	12934, 30.15, 6245.3
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12904, 30.4, 6290.4
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12873.6, 30.38, 6270
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12904, 30.4, 6229.6
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Platform1_Stairs_20
+<ObjectPosition>	12911.1, 53.4, 6259.9
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Stairs_Block_Terminator
+<ObjectPosition>	12900, 54.35, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Stairs_Block
+<ObjectPosition>	12900, 49.35, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Stairs_Block_Corridor
+<ObjectPosition>	12900, 44.35, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Stairs_Block
+<ObjectPosition>	12900, 39.35, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Stairs_Block_Corridor
+<ObjectPosition>	12900, 34.35, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Stairs_Block
+<ObjectPosition>	12900, 29.35, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Stairs_Start
+<ObjectPosition>	12900, 24.85, 6260
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1_L10
+<ObjectPosition>	12887.6, 52.75, 6260
+<ObjectOrientation>	-90,	85,	90
+
+<Object>			StaticObj_Pier_Concrete1_L10
+<ObjectPosition>	12900, 52.8, 6272.2
+<ObjectOrientation>	0,	85,	90
+
+<Object>			StaticObj_Pier_Concrete1_L10
+<ObjectPosition>	12901, 52.8, 6249.1
+<ObjectOrientation>	180,	85,	90
+
+<Object>			StaticObj_Pier_Concrete1_L10
+<ObjectPosition>	12915, 52.8, 6260
+<ObjectOrientation>	90,	85,	90
+
+<Object>			StaticObj_Pier_Concrete1_L10
+<ObjectPosition>	12882.5, 22, 6254
+<ObjectOrientation>	0,	10,	90
+
+<Object>			StaticObj_Pier_Concrete1_L10
+<ObjectPosition>	12889, 31.5, 6244
+<ObjectOrientation>	90,	90,	0
+
+<Object>			StaticObj_Wall_FenStadium
+<ObjectPosition>	12906.7, 26, 6244.9
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Wall_FenStadium
+<ObjectPosition>	12906.7, 26, 6251.6
+<ObjectOrientation>	90,	0,	0
+
+// Secret Underground Bunker
+
+<Object>			StaticObj_Pier_Concrete1_L10
+<ObjectPosition>	12901, 23.2, 6253.7
+<ObjectOrientation>	0,	85,	90
+
+<Object>			StaticObj_Pier_Concrete1_L10
+<ObjectPosition>	12889.8, 23.2, 6252
+<ObjectOrientation>	90,	85,	90
+
+<Object>			Land_Underground_Stairs_Block_Terminator
+<ObjectPosition>	12903, 24.3, 6243
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Underground_Stairs_Block
+<ObjectPosition>	12903, 19.3, 6243
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Underground_Stairs_Block
+<ObjectPosition>	12903, 14.3, 6243
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Underground_Stairs_Start
+<ObjectPosition>	12903, 9.77, 6243
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Underground_Entrance
+<ObjectPosition>	12886, 9.75, 6243.47
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Panel_Lever
+<ObjectPosition>	12889, 11.4, 6241.55
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Panel
+<ObjectPosition>	12893.2, 11.262, 6240.9
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Forest_HumanSkeleton
+<ObjectPosition>	12890.3, 9.8, 6243
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Forest_HumanSkeleton
+<ObjectPosition>	12887.7, 10.6, 6246.5
+<ObjectOrientation>	-20,	90,	0
+
+<Object>			StaticObj_Wall_Cnc_5
+<ObjectPosition>	12895.5, 14.3, 6244
+<ObjectOrientation>	90,	70,	0
+
+// Bunker Floor Top
+
+<Object>			Land_Underground_Corridor_Main_Left
+<ObjectPosition>	12912.9, 44.7, 6269.15
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Corridor_Main_Left
+<ObjectPosition>	12912.9, 44.7, 6246.37
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Storage_Workshop
+<ObjectPosition>	12895.75, 44.7, 6270.96
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Storage_Hospital
+<ObjectPosition>	12895.75, 44.7, 6248.2
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Stairs_Block_Corridor_NoDoor
+<ObjectPosition>	12925.8, 44.35, 6259.85
+<ObjectOrientation>	90,	0,	0
+
+// Bunker Floor Middle
+
+<Object>			Land_Underground_Corridor_Main_Left
+<ObjectPosition>	12912.9, 34.7, 6269.15
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Corridor_Main_Left
+<ObjectPosition>	12912.9, 34.7, 6246.37
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Storage_Prison
+<ObjectPosition>	12895.75, 34.7, 6270.96
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Storage_Laboratory
+<ObjectPosition>	12895.75, 34.7, 6248.2
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Underground_Stairs_Block_Corridor_NoDoor
+<ObjectPosition>	12925.8, 34.35, 6259.85
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Platform2_Stairs_20
+<ObjectPosition>	12899.5, 25, 6271
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12896.4, -14.1, 6245.13
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Pier_Concrete1_CornerOut
+<ObjectPosition>	12892, 0, 6256.2
+<ObjectOrientation>	9,	0,	0
+
+// Bunker Floor Bottom
+
+<Object>			Land_Underground_Corridor_Main_Left
+<ObjectPosition>	12912.9, 24.7, 6269.15
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Corridor_Main_Left
+<ObjectPosition>	12912.9, 24.7, 6246.37
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Storage_Big
+<ObjectPosition>	12895.75, 24.7, 6270.96
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			Land_Misc_Well_Pump_Yellow
+<ObjectPosition>	12913,    25.4,		6256
+<ObjectOrientation>	0,	    	0,
+
+// Aerial Tower and School
+
+<Object>			Land_Tower_TC4_Base
+<ObjectPosition>	12905,    87.9,		6260
+<ObjectOrientation>	0,	    	0,	0
+
+<Object>			Land_Tower_TC4_Mid
+<ObjectPosition>	12905.1,    131.4,	6259.9
+<ObjectOrientation>	0,	    	0,	0
+
+<Object>			Land_Tower_TC4_Top
+<ObjectPosition>	12905,    171.9,	6260
+<ObjectOrientation>	0,	    	0,
+
+<Object>			StaticObj_Wall_Cnc_5
+<ObjectPosition>	12910.5,    64.85,	6253
+<ObjectOrientation>	90,	    	90,	0
+
+<Object>			Land_City_School
+<ObjectPosition>	12903,    60.5,		6260.2
+<ObjectOrientation>	-90,	    	0,	0
+
+<Object>			StaticObj_Rail_Crossing_Block_25
+<ObjectPosition>	12894,    63.7,	6276.6
+<ObjectOrientation>	0,	    0,	0
+
+<Object>			StaticObj_Power_TransformerStation_Big
+<ObjectPosition>	12893,    65,	6277
+<ObjectOrientation>	-90,	    	0,	0
+
+// Gate
+
+<Object>			Land_Wall_Gate_IndCnc4
+<ObjectPosition>	13128.5, 13, 6218.4
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Wall_IndCnc4_8
+<ObjectPosition>	13125, 18.4, 6212
+<ObjectOrientation>	90,	60,	0
+
+<Object>			StaticObj_Wall_IndCnc4_8
+<ObjectPosition>	13125, 18.4, 6220
+<ObjectOrientation>	90,	60,	0
+
+<Object>			StaticObj_Rail_Bridge_15
+<ObjectPosition>	12879.6,    25.5,	6242.8
+<ObjectOrientation>	0,	    	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12933.7, 41.5, 6256
+<ObjectOrientation>	-90,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12874, 41.5, 6241
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Mine_Rail_Tram
+<ObjectPosition>	12930, 25.1, 6260
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Mine_Rail_Tram
+<ObjectPosition>	12931.8, 25.1, 6260.5
+<ObjectOrientation>	60,	0,	0
+
+<Object>			StaticObj_Mine_Rail_Tram
+<ObjectPosition>	12934, 25, 6259
+<ObjectOrientation>	75,	0,	85
+
+<Object>			StaticObj_Dam_Concrete_40
+<ObjectPosition>	13230,    3,	6261
+<ObjectOrientation>	90,	    	0,	0
+
+// Concrete Base for when no water
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13039,    13.2,    6190.5
+<ObjectOrientation>	180,    	0,	-60
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13039,    13.2,    6230.5
+<ObjectOrientation>	180,    	0,	-60
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13040,    13.2,    6230.5
+<ObjectOrientation>	90,    	0,	-60
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13000,    13.2,    6230.5
+<ObjectOrientation>	90,    	0,	-60
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12960,    13.2,    6230.5
+<ObjectOrientation>	90,    	0,	-60
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12923,    13.1,    6206
+<ObjectOrientation>	90,    	0,	-60
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12885,    13.2,    6206
+<ObjectOrientation>	90,    	0,	-60
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12860,    13.2,    6215
+<ObjectOrientation>	90,    	0,	-60
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12820,    13.2,    6215
+<ObjectOrientation>	90,    	0,	-60
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12780,    13.2,    6215
+<ObjectOrientation>	90,    	0,	-60
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12777.6,    13.2,    6210
+<ObjectOrientation>	0,    	0,	-60
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12777.6,    13.2,    6170
+<ObjectOrientation>	0,    	0,	-60
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12777.6,    13.2,    6130
+<ObjectOrientation>	0,    	0,	-60
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13084.5,    9,    6288
+<ObjectOrientation>	90,    	0,	-90
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13081,    9,    6187
+<ObjectOrientation>	0,    	0,	-90
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13081,    9,    6227
+<ObjectOrientation>	0,    	0,	-90
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13133.8,    -5.2,    6250
+<ObjectOrientation>	0,    	0,	-45
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13117.2,    -2.1,    6294
+<ObjectOrientation>	90,    	45,	-90
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13149,    -3.6,    6258
+<ObjectOrientation>	0,    	0,	-90
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12819,    4,    6176
+<ObjectOrientation>	0,    	0,	-90
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12859,    3.6,    6176
+<ObjectOrientation>	0,    	0,	-90
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13081,    12.5,    6184
+<ObjectOrientation>	90,    	-45,	-90
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13081,    12.5,    6232
+<ObjectOrientation>	90,    	-45,	-90
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13081,    12.5,    6288
+<ObjectOrientation>	90,    	-45,	-90
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13081,    12.5,    6336
+<ObjectOrientation>	90,    	-45,	-90
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13039,    13.2,    6284
+<ObjectOrientation>	180,    	0,	-60
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13039,    13.2,    6324
+<ObjectOrientation>	180,    	0,	-60
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13012,    5,    6290.5
+<ObjectOrientation>	0,    	-30,	-90
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12964.03,    5,    6290.5
+<ObjectOrientation>	0,    	-30,	-90
+
+<Object>			StaticObj_Pier_Concrete1_L10
+<ObjectPosition>	13042,    27,    6272
+<ObjectOrientation>	180,    	-60,	-90
+
+<Object>			StaticObj_Pier_Concrete1_L10
+<ObjectPosition>	13004,    26.8,    6272
+<ObjectOrientation>	180,    	-60,	-90
+
+<Object>			StaticObj_Pier_Concrete1_L10
+<ObjectPosition>	12964.3,    27,    6272
+<ObjectOrientation>	180,    	-60,	-90
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12777.6,    13.2,    6269
+<ObjectOrientation>	0,    	0,	-60
+
+<Object>			StaticObj_Pier_Concrete1_L10
+<ObjectPosition>	12850,    27,    6257
+<ObjectOrientation>	180,    	-60,	-90
+
+<Object>			StaticObj_Pier_Concrete1_L10
+<ObjectPosition>	12770,    27,    6257
+<ObjectOrientation>	180,    	-60,	-90
+
+<Object>			StaticObj_Pier_Concrete1_L10
+<ObjectPosition>	12810,    26.8,    6257
+<ObjectOrientation>	180,    	-60,	-90
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12842,    5,    6275.5
+<ObjectOrientation>	0,    	-30,	-90
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12794,    5,    6275.5
+<ObjectOrientation>	0,    	-30,	-90
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12885,    13.2,    6314
+<ObjectOrientation>	-90,    	0,	-60
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	12923,    13.1,    6314
+<ObjectOrientation>	-90,    	0,	-60
+
+// Rear Bridge
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12770, 43, 6239.8
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12790, 43, 6239.8
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20_Floodgate
+<ObjectPosition>	12810, 43, 6239.7
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12830, 43, 6239.8
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12850, 43, 6239.8
+<ObjectOrientation>	0,	0,	0
+
+<Object>			StaticObj_Dam_Concrete_20
+<ObjectPosition>	12869, 44.1, 6239.82
+<ObjectOrientation>	0,	0,	-6.5
+
+// Rear Tunnel
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12878, 24.5, 6243.45
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12868, 24.5, 6243.45
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12858, 24.5, 6243.45
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12848, 24.5, 6243.45
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12838, 24.5, 6243.45
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12828, 24.5, 6243.45
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12818, 24.5, 6243.45
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12808, 24.5, 6243.45
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12800, 24.75, 6243.45
+<ObjectOrientation>	90,	-4,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12790.1, 25.45, 6243.45
+<ObjectOrientation>	90,	-4,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12780.2, 26.15, 6243.45
+<ObjectOrientation>	90,	-4,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12770.5, 26.5, 6243.45
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12760.5, 26.5, 6243.45
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single_Right
+<ObjectPosition>	12748.7, 26.5, 6236.7
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12748.75, 26.5, 6231.75
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12748.75, 26.5, 6221.75
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12748.75, 26.5, 6211.75
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12748.75, 26.5, 6201.75
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12748.75, 26.5, 6191.75
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12748.7, 26.5, 6181.75
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single_Left
+<ObjectPosition>	12742, 26.5, 6170
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12737, 26.5, 6170
+<ObjectOrientation>	90,	0,	0
+
+// Secret Rear Barracks Room
+
+<Object>			StaticObj_Target_Concrete_Ramp
+<ObjectPosition>	12715.7,    17,    6170.3
+<ObjectOrientation>	-90,    	2,	0
+
+<Object>			Land_Mil_Barracks1
+<ObjectPosition>	12748.7, 20, 6214.2
+<ObjectOrientation>	90,	0,	0
+
+<Object>			StaticObj_Wall_Cnc_5
+<ObjectPosition>	12748, 22.2, 6210.3
+<ObjectOrientation>	0,	90,	90
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12748.75, 18, 6201.75
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12748.75, 18, 6191.75
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12748.7, 18, 6181.75
+<ObjectOrientation>	0,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single_Left
+<ObjectPosition>	12742, 18, 6170
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12737, 18, 6170
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_Underground_Tunnel_Single
+<ObjectPosition>	12727, 18, 6170
+<ObjectOrientation>	90,	0,	0
+
+// Extended Dock
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13633.7,    -20.8,    6312.7
+<ObjectOrientation>	-53,    	0,	0
+
+<Object>			StaticObj_Pier_Concrete1_L30
+<ObjectPosition>	13652.6,    -21.05,    6298.2
+<ObjectOrientation>	-38,    	0,	0
+
+<Object>			StaticObj_Pier_Concrete1_L10
+<ObjectPosition>	13655.1,    -20.98,    6293.7
+<ObjectOrientation>	-18,    	0,	0
+
+<Object>			StaticObj_Pier_Concrete1_L10
+<ObjectPosition>	13655.7,    -20.98,    6291.2
+<ObjectOrientation>	-8,    	0,	0
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13655.5,    -20.8,    6270.5
+<ObjectOrientation>	0,    	0,	0
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13655.5,    -20.8,    6230.5
+<ObjectOrientation>	0,    	0,	0
+
+<Object>			StaticObj_Pier_Concrete1
+<ObjectPosition>	13655.5,    -20.8,    6190.5
+<ObjectOrientation>	0,    	0,	0
+
+<Object>			StaticObj_Pier_Concrete1_End
+<ObjectPosition>	13655.8,    -20.8,    6145.1
+<ObjectOrientation>	0,    	0,	0
+
+// Pier Ship 
+
+<Object>			Land_Ship_Big_FrontA
+<ObjectPosition>	13682.49,    12,    6200
+<ObjectOrientation>	90,    	0,
+
+<Object>			Land_Ship_Big_FrontB
+<ObjectPosition>	13680.18,    10.5,    6219.9
+<ObjectOrientation>	90,    	0,
+
+<Object>			Land_Ship_Big_BackA
+<ObjectPosition>	13678.95,    12,    6255.4
+<ObjectOrientation>	90,    	0,
+
+<Object>				Land_Ship_Big_BackB
+<ObjectPosition>	13679.5,    10.5,    6275
+<ObjectOrientation>	90,    	0,
+
+<Object>			Land_Ship_Big_Castle
+<ObjectPosition>	13679.3,    20.65,    6263.6
+<ObjectOrientation>	90,    	0,
+
+<Object>			Bonfire
+<ObjectPosition>	13679.3,    20.2,	6269.6
+<ObjectOrientation>	180,	    	10,	 0
+
+<Object>			StaticObj_Tisy_RadarPlatform_Mid
+<ObjectPosition>	13683.5,    -7.4,	6231.9
+<ObjectOrientation>	180,	    	10,	 0
+
+<Object>			StaticObj_Tisy_RadarPlatform_Mid
+<ObjectPosition>	13675,    -7.4,	6231.9
+<ObjectOrientation>	180,	    	10,	 0
+
+<Object>			StaticObj_Tisy_RadarPlatform_Mid
+<ObjectPosition>	13683.5,    -7.4,	6241.2
+<ObjectOrientation>	0,	    	10,	 0
+
+<Object>			StaticObj_Tisy_RadarPlatform_Mid
+<ObjectPosition>	13675,    -7.4,	6241.2
+<ObjectOrientation>	0,	    	10,	 0
+
+<Object>			StaticObj_Tisy_RadarPlatform_Mid
+<ObjectPosition>	13679.3,    -7.4,	6197.6
+<ObjectOrientation>	0,	    	10,	 0
+
+<Object>			StaticObj_Hanged_civil
+<ObjectPosition>	13677.3,    21,	6239.3
+<ObjectOrientation>	0,	    	0,	 0
+
+<Object>			StaticObj_Hanged_doctor
+<ObjectPosition>	13677.3,    17,	6195
+<ObjectOrientation>	0,	    	0,	 0
+
+<Object>			Land_Medical_Tent_Big
+<ObjectPosition>	13679.23,    2.6,	6300
+<ObjectOrientation>	0,	    	0,	 0
+
+<Object>			Land_Medical_Tent_Big
+<ObjectPosition>	13676.3,    7.4,	6223
+<ObjectOrientation>	0,	    	0,	 0
+
+<Object>			Land_Medical_Tent_Big
+<ObjectPosition>	13679.3,    9.9,	6187
+<ObjectOrientation>	-90,	    	0,	 0
+
+<Object>			StaticObj_Wall_Cnc_5
+<ObjectPosition>	13664,    2.4,	6230.87
+<ObjectOrientation>	0,	    	90,	 0
+
+// Wind Farm Row 1:
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	14040, 22, 6760
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	14040, 22, 6660
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	14040, 22, 6560
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	14040, 22, 6460
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	14040, 22, 6360
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	14040, 22, 6260
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	14040, 22, 6160
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	14040, 22, 6060
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	14040, 22, 5960
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	14040, 22, 5860
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	14040, 22, 5760
+<ObjectOrientation>	90,	0,	0
+
+// Wind Farm Row 2:
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13940, 22, 6760
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13940, 22, 6660
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13940, 22, 6560
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13940, 22, 6460
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13940, 22, 6360
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13940, 22, 6260
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13940, 22, 6160
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13940, 22, 6060
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13940, 22, 5960
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13940, 22, 5860
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13940, 22, 5760
+<ObjectOrientation>	90,	0,	0
+
+// Wind Farm Row 3:
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13840, 22, 6760
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13840, 22, 6660
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13840, 22, 6560
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13840, 22, 6460
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13840, 22, 6360
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13840, 22, 6260
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13840, 22, 6160
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13840, 22, 6060
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13840, 22, 5960
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13840, 22, 5860
+<ObjectOrientation>	90,	0,	0
+
+<Object>			Land_WindPowerPlant_Grey
+<ObjectPosition>	13840, 22, 5760
+<ObjectOrientation>	90,	0,	0
+
+// Fire Barrels (Removed until 1.21 duplicating resolved)
+
+// <Object>			BarrelHoles_Red
+// <ObjectPosition>	12907,	54.15,	6261.5
+// <ObjectOrientation>	0,			0,			0
+
+// <Object>			BarrelHoles_Red
+// <ObjectPosition>	12920.4,	24.78,	6261.6
+// <ObjectOrientation>	0,			0,			0
+
+// <Object>			BarrelHoles_Red
+// <ObjectPosition>	13130,	12.05,	6213
+// <ObjectOrientation>	0,			0,			0
+
+// Extras that requires other mods...
+
+// ATM (Requires "Banking" Mod)
+
+<Object>			DC_BankingATMOrange
+<ObjectPosition>	13221,    8.3,	6228.2
+<ObjectOrientation>	178,	    	0,	0
+
+<Object>			DC_BankingATMOrange
+<ObjectPosition>	12912.9,    24.8,	6261.2
+<ObjectOrientation>	0,	    	0,	0
+
+// Spot Lights (Requires OP_BaseItems Mod)
+
+<Object>			OP_Lightbox_Automatic
+<ObjectPosition>	13174, 20.8, 6214
+<ObjectOrientation>	-55,	0,	0
+
+<Object>			OP_Lightbox_Automatic
+<ObjectPosition>	12940, 52.3, 6224
+<ObjectOrientation>	-20,	0,	0
+
+<Object>			OP_Lightbox_Automatic
+<ObjectPosition>	12940, 52.3, 6295
+<ObjectOrientation>	255,	0,	0
+
+<Object>			OP_Lightbox_Automatic
+<ObjectPosition>	12716.9, 22.1, 6166
+<ObjectOrientation>	105,	15,	0
+
+<Object>			Bonfire
+<ObjectPosition>	12914,    10,	6260
+<ObjectOrientation>	0,	    	0,	 0
+
+// Red Smoke on Tower (Requires "Airdrop Upgraded" Mod
+
+<Object>			AirdropContainer_Blue
+<ObjectPosition>	12904.9,    183,	6260
+<ObjectOrientation>	0,	    	0,	0
+
+<FileEnd>
